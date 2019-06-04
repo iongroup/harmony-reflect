@@ -90,6 +90,10 @@
 (function(global){ // function-as-module pattern
 "use strict";
 
+if (typeof global.Reflect !== "undefined") {
+  return;
+}
+
 // === Direct Proxies: Invariant Enforcement ===
 
 // Direct proxies build on non-direct proxies by automatically wrapping
